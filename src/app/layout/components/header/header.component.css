@@ -1,0 +1,192 @@
+nav {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 30px;
+}
+nav .icon {
+  padding-top: 30px;
+  font-size: 35px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.search_wrap {
+  width: 500px;
+}
+.search_wrap .search_box {
+  position: relative;
+  width: 500px;
+  height: 60px;
+}
+.search_wrap .search_box .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: var(--color-secondary);
+}
+.search_wrap .search_box .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  cursor: pointer;
+}
+.search_wrap .search_box .btn.btn_common svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--color-primary);
+  font-size: 25px;
+  background-color: transparent;
+}
+.search_wrap.search_wrap_3 {
+  padding: inherit;
+}
+.search_wrap.search_wrap_3 .search_box .input {
+  padding-right: 80px;
+  border-radius: 50px;
+}
+.search_wrap.search_wrap_3 .search_box .btn {
+  right: 0px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  text-align: center;
+  list-style: none;
+  margin: auto 0;
+}
+
+nav ul li {
+  margin: 0 2px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+nav ul li:hover a {
+  color: var(--color-tertiary);
+}
+
+nav .login-btn {
+  margin-left: 20px;
+}
+nav .bar {
+  position: relative;
+  margin: auto;
+  display: none;
+}
+.hidden {
+  display: none;
+}
+
+nav .bar button {
+  position: absolute;
+  color: var(--color-orange);
+  font-size: 35px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+}
+
+@media screen and (max-width: 1250px) {
+  nav {
+    display: block;
+    padding: 10px 10px;
+  }
+  nav .icon {
+    display: inline-block;
+    padding: 15px 30px;
+  }
+  nav .search_wrap {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+  }
+  nav .search-box input {
+    width: 90%;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-black);
+    height: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  nav ul li {
+    text-align: center;
+    transition: 0.3s 0.1s all;
+    opacity: 0;
+  }
+  nav ul li a {
+    color: var(--color-tertiary);
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+  }
+
+  nav ul li:nth-child(1) {
+    transform: translateX(-100px);
+  }
+  nav ul li:nth-child(2) {
+    transform: translateX(-150px);
+  }
+  nav ul li:nth-child(3) {
+    transform: translateX(-200px);
+  }
+  nav ul li:nth-child(4) {
+    transform: translateX(-250px);
+  }
+  nav ul li:nth-child(5) {
+    background-color: var(--color-primary);
+    transform: translateX(-300px);
+  }
+
+  nav ul li:hover a {
+    color: var(--color-orange);
+  }
+
+  nav .bar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    cursor: pointer;
+  }
+  #check:checked ~ nav ul {
+    visibility: visible;
+    height: 267px;
+  }
+  #check:checked ~ nav ul li:nth-child(1),
+  #check:checked ~ nav ul li:nth-child(2),
+  #check:checked ~ nav ul li:nth-child(3),
+  #check:checked ~ nav ul li:nth-child(4),
+  #check:checked ~ nav ul li:nth-child(5) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
