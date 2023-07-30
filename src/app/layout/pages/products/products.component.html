@@ -1,1 +1,19 @@
-<p>products works!</p>
+<div class="container">
+  <div class="wrapper">
+    <div *ngFor="let card of cards">
+      <div class="card">
+        <img [src]="card.photoUrl" alt="card-image" />
+        <div class="info">
+          <h1>{{ card.name }}</h1>
+          <p>
+            {{ card.description }}
+          </p>
+          <a class="btn" (click)="openDialog(card)">Read More...</a>
+        </div>
+      </div>
+      <div>
+        <h1 class="d-flex justify-content-center p-2">{{ card.name }}</h1>
+      </div>
+    </div>
+  </div>
+</div>

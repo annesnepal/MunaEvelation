@@ -13,6 +13,7 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { DialogComponent } from './shared/components/dialog/dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     FeaturedComponent,
     ProductsComponent,
     ContactusComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
