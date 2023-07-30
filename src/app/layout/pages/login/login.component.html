@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="login-box">
+  <h2>Admin Login</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required="" />
+      <i class="fa-regular fa-envelope"></i>
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input [type]="hide ? 'password' : 'text'" name="" required="" />
+      <i
+        [class]="hide ? 'fa-regular fa-eye' : 'fa-regular fa-eye-slash'"
+        (click)="hide = !hide"
+      ></i>
+      <label>Password</label>
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+  </form>
+</div>
